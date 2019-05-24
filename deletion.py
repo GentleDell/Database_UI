@@ -9,73 +9,7 @@ import tkinter as tk
 from tkinter.messagebox import showinfo, askyesno
 from tkinter import IntVar, Label, Entry, Button, W
 
-TABEL_LIST = ['Amenities', 'Attributes',  'Avg_price',  'Calendar' ,
-             'Capacity' , 'Hosts'     ,  'Listing'  ,  'Locations',
-             'Obtain'   , 'Provide'   ,  'Requirements','Reviews' ,
-             'Scores'   , 'Verifications', 'Verify'      ]
-
-COLUNM_LIST = [['ame_id', 'amenities'],
-               ['attr_id', 'property_type', 'room_type', 'accomodates', 
-                'bathrooms', 'bedrooms', 'beds', 'bed_type', 'square_feet',
-                'is_business_travel_ready'],
-               ['avg_p_id', 'price', 'weekly_price', 'monthly_price', 
-                'security_deposit', 'cleaning_fee'],
-               ['list_id', 'date_', 'price'],
-               ['cap_id', 'guests_included', 'extra_people',  
-                'minimum_nights', 'maximum_nights'],
-               ['host_id', 'host_url', 'host_name',  'host_since', 
-                'host_response_time','host_response_rate','host_thumbnail_url',
-                'host_picture_url', 'host_neighbourhood', 'host_about'],
-               ['list_id', 'host_id', 'loc_id', 'cap_id', 'attr_id', 'req_id', 
-                'avg_p_id', 'list_url', 'list_name',  'picture_url', 'latitude', 
-                'longitude','dsummary','dspace', 'description', 'neighborhood_overview', 
-                'notes', 'transit','daccess','interaction', 'house_rules'],
-               ['loc_Id', 'country', 'country_code',  'city', 'city_name'],
-               ['list_id', 'scor_id'],
-               ['list_id', 'ame_id'],
-               ['req_id', 'cancellation_policy', 'REQUIRE_GUEST_PROFILE_PICTURE', 'REQUIRE_GUEST_PHONE_VERIFICATION'],
-               ['list_id', 'rev_id', 'date_',  'reviewer_id', 
-                    'reviewer_name','comments'],
-               ['scor_id', 'review_scores_rating', 'review_scores_accuracy',
-                'review_scores_cleanliness'      , 'review_scores_checkin' , 
-                'review_scores_communication'    , 'review_scores_location',
-                'review_scores_value'],
-               ['ver_id', 'verifications'],
-               ['host_id', 'ver_id']]
-               
-TYPE_LIST = [# amenity
-             ['int', 'str'],  
-             # attribute
-             ['int', 'str', 'str', 'int', 
-              'int', 'int', 'int', 'str', 'float', 'str'],
-             # avg_price
-             ['int', 'str', 'str', 'str', 'str', 'str'],
-             # calendar
-             ['int', 'str', 'str'],
-             # capacity
-             ['int', 'int', 'str', 'int', 'int'],
-             # host
-              ['int', 'str', 'str',  'str', 'str','str','str','str', 'str', 'str'],
-             # listing
-             ['int', 'int', 'int', 'int', 'int', 'int', 'int', 'str', 'str',  'str', 'float', 
-              'float','str','str', 'str', 'str', 'str', 'str','str','str', 'str'],
-             # location
-             ['int', 'str', 'str',  'str', 'str'],
-             # obtain
-             ['int', 'int'],
-             # provide
-             ['int', 'int'],
-             # requirment
-             ['int', 'str', 'str', 'str'],
-             # review 
-             ['int', 'int', 'str', 'int', 'str','str'],
-             # score
-             ['int', 'float', 'float', 'float', 'float' , 
-              'float', 'float', 'float'],
-             # verifications
-             ['int', 'str'],
-             # verify
-             ['int', 'int']]
+from constants import TABEL_LIST, COLUNM_LIST, TYPE_LIST
 
 # In[]
 def upload_query(query, bind_var):

@@ -9,6 +9,8 @@ import tkinter as tk
 from tkinter.messagebox import showinfo, askyesno
 from tkinter import IntVar, Label, Entry, Button, Text, END, W
 
+from constants import TABEL_LIST
+
 # In[]
 def upload_query(tabel_name ,attributes, entries):
     
@@ -558,12 +560,6 @@ def Ins_Verify_Handler():
     
 # In[]
 # basic window
-    
-TABEL_LIST =['Amenities', 'Attributes',  'Avg_price',  'Calendar' ,
-             'Capacity' , 'Hosts'     ,  'Listing'  ,  'Locations',
-             'Obtain'   , 'Provide'   ,  'Requirements','Reviews' ,
-             'Scores'   , 'Verifications', 'Verify'      ]
-
 Ins_Handler = [Ins_amenities_Handler,  Ins_attributes_Handler,  Ins_avg_price_Handler,
                Ins_calendar_Handler ,  Ins_capacity_Handler  ,  Ins_host_Handler     ,
                Ins_listing_Handler  ,  Ins_Locations_Handler ,  Ins_Obtain_Handler   ,
