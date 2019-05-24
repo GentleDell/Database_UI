@@ -18,8 +18,8 @@ def upload_query(tabel_name ,attributes, entries):
         showinfo('Yes', 'Uploading the data')
         
         # connect to the server
-        dsn_tns = cx_Oracle.makedsn('cs322-db.epfl.ch', '1521', service_name='ORCLCDB')
-        conn = cx_Oracle.connect(user=r'C##DB2019_G19', password='DB2019_G19', dsn=dsn_tns)
+        dsn_tns = cx_Oracle.makedsn('HOST', 'PORT', service_name='TOBEFILLED')
+        conn = cx_Oracle.connect(user=r'USER_NAME', password='PASSWORDS', dsn=dsn_tns)
                                  
         c = conn.cursor()
         
